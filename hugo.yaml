@@ -1,6 +1,6 @@
 # Configuration
-baseURL: "https://mytest-hextra.github.io"
-title: "Hextra"
+baseURL: "https://agent-sandbox.github.io"
+title: "Agent-Sandbox"
 
 enableRobotsTXT: true
 # Parse Git commit
@@ -22,7 +22,7 @@ languages:
   en:
     languageName: English
     weight: 1
-    title: Hextra
+    title: Agent-Sandbox
 
 module:
   hugoVersion:
@@ -160,20 +160,4 @@ params:
     # tabs:
     #   sync: true
 
-  comments:
-    enable: false
-    type: giscus
 
-    # https://giscus.app/
-    giscus:
-      repo: imfing/hextra
-      repoId: R_kgDOJ9fJag
-      category: General
-      categoryId: DIC_kwDOJ9fJas4CY7gW
-      # mapping: pathname
-      # strict: 0
-      # reactionsEnabled: 1
-      # emitMetadata: 0
-      # inputPosition: top
-      # lang: en
-      # theme: noborder_dark

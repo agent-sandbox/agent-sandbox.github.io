@@ -1,0 +1,13 @@
+<svg viewBox="0 0 180 180" fill="none" width="180" height="180" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_4600_4167)">
+        <path d="M8.98318 23.8356L0 18.8141V8.48932L8.98318 13.5105V23.8356Z" fill="#bc3bfd"></path>
+        <path d="M12.0548 23.8356L21.038 18.8141V8.48932L12.0548 13.5105V23.8356Z" fill="#00C693"></path>
+        <path d="M10.5177 0.575531L1.54126 5.90416L10.5177 10.9216L19.4941 5.90416L10.5177 0.575531Z" fill="#7ebb01"></path>
+    </g>
+    <defs>
+        <clipPath id="clip0_4600_4167">
+            <rect width="90.8209" height="24" fill="white"></rect>
+        </clipPath>
+    </defs>
+    <text style="fill: rgb(0, 198, 147); font-family: Moire; font-size: 12px; font-weight: 300; white-space: pre;" transform="matrix(1, 0, 0, 0.970579, -12.707432, -8.768402)"><tspan x="36.487" y="20.163">Agent</tspan><tspan x="36.487" dy="1em">​</tspan><tspan>Sandbox</tspan></text>
+</svg>

@@ -3,40 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/docs/getting-started/</loc>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/guide/</loc>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/guide/markdown/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/example/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/guide/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/markdown/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/markdown/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/docs/</loc>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/</loc>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/showcase/</loc>
+    <lastmod>2026-01-06T18:16:00+08:00</lastmod>
   </url>
 </urlset>

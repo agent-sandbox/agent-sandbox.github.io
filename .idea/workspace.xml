@@ -27,7 +27,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/guoruifeng/Documents/dev/github/agent-sandbox.github.io/content/docs/guide",
+    "last_opened_file_path": "/Users/guoruifeng/Documents/dev/github/agent-sandbox.github.io/static/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -39,7 +39,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
+      <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/content/docs/guide" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/layouts/_partials/custom" />
+      <recent name="$PROJECT_DIR$/layouts/_partials" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -57,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1767688948998</updated>
-      <workItem from="1767688950092" duration="5111000" />
+      <workItem from="1767688950092" duration="11840000" />
     </task>
     <servers />
   </component>
