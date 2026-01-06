@@ -1,0 +1,22 @@
+# Hextra
+
+> Modern, responsive, batteries-included Hugo theme for creating beautiful static websites.
+
+
+## Blog
+- [Markdown Syntax Guide](http://localhost:1313/blog/markdown/): This article offers a sample of basic Markdown syntax that can be used in Hugo content files. - Published 2020-01-01
+
+## Introduction
+- [Getting Started](http://localhost:1313/docs/getting-started/): Quick Start from Template imfing/hextra-starter-template
+
+### Guide
+- [Markdown](http://localhost:1313/docs/guide/markdown/): Hugo supports Markdown syntax for formatting text, creating lists, and more. This page will show you …
+
+
+## Root Pages
+- [About](http://localhost:1313/about/): Hextra is designed to be a simple, fast, and flexible theme for building modern static websites. It …
+- [Showcase](http://localhost:1313/showcase/): Open source projects powered by Hextra PrintN Beginner Privacy Clace Regolith Desktop Model Context …
+
+---
+Generated on 2026-01-06 18:15:49 UTC
+Site: http://localhost:1313/

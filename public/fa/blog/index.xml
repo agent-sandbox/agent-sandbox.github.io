@@ -1,0 +1,31 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>هگزترا – Blogs</title>
+    <link>http://localhost:1313/fa/blog/</link>
+    <description>Recent content in Blogs on هگزترا</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fa</language>
+    
+	  <atom:link href="http://localhost:1313/fa/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/fa/blog/v0.11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/fa/blog/v0.11/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

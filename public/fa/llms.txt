@@ -1,0 +1,12 @@
+# هگزترا
+
+> Modern, responsive, batteries-included Hugo theme for creating beautiful static websites.
+
+
+## Blogs
+- [](http://localhost:1313/fa/blog/v0.11/): 
+
+
+---
+Generated on 2026-01-06 18:11:59 UTC
+Site: http://localhost:1313/

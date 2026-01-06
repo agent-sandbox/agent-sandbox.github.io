@@ -1,0 +1,397 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hextra – Release</title>
+    <link>http://localhost:1313/tags/release/</link>
+    <description>Recent content in Release on Hextra</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Aug 2025 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="http://localhost:1313/tags/release/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Hextra v0.10</title>
+      <link>http://localhost:1313/blog/v0.10/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/v0.10/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Hextra v0.10.0 is a big release packed with new capabilities, architectural upgrades, and quality-of-life improvements.&lt;/p&gt;
+&lt;p&gt;It also includes contributions from 10 &lt;a href=&#34;#contributors&#34;&gt;new contributors&lt;/a&gt; and addresses long-standing community requests.&lt;/p&gt;
+&lt;h2&gt;Upgrade Guide&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;upgrade-guide&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#upgrade-guide&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-purple-200 hx:bg-purple-100 hx:text-purple-900 hx:dark:border-purple-200/30 hx:dark:bg-purple-900/30 hx:dark:text-purple-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Important&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;&lt;strong&gt;Breaking Changes&lt;/strong&gt;: This release includes several breaking changes. Please review the checklist and the &lt;a href=&#34;#migration-guide&#34;&gt;Migration Guide&lt;/a&gt; before upgrading.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Before upgrading to v0.10.0, ensure that you have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo v0.146.0+ (extended version) installed&lt;/li&gt;
+&lt;li&gt;Reviewed custom CSS for class name changes (see &lt;a href=&#34;#css-class-prefix-changes&#34;&gt;CSS Class Prefix Changes&lt;/a&gt; and &lt;a href=&#34;#tailwind-css-v4&#34;&gt;Tailwind CSS v4&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Verified that build environment has internet access for asset downloads when LaTeX and/or Mermaid is used&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once ready, update the Hugo module:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo mod get -u github.com/imfing/hextra@v0.10.0&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;New Features&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;new-features&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#new-features&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Here is a list of notable new features in this release:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#dropdown-menu-support-in-navbar&#34;&gt;&lt;strong&gt;Dropdown Menu Support in Navbar&lt;/strong&gt;&lt;/a&gt;: create hierarchical navigation menus&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#enhanced-search-experience&#34;&gt;&lt;strong&gt;Enhanced Search Experience&lt;/strong&gt;&lt;/a&gt;: improved search across all headings with better accuracy&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#llmstxt-support&#34;&gt;&lt;strong&gt;llms.txt Support&lt;/strong&gt;&lt;/a&gt;: generate AI-friendly site outline&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#table-of-contents-scroll-highlighting&#34;&gt;&lt;strong&gt;Table of Contents Scroll Highlighting&lt;/strong&gt;&lt;/a&gt;: automatic heading highlighting during page scroll&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#synchronized-tab-switching&#34;&gt;&lt;strong&gt;Synchronized Tab Switching&lt;/strong&gt;&lt;/a&gt;: synchronize tab selections across multiple tab groups&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#blog-list-pagination&#34;&gt;&lt;strong&gt;Blog List Pagination&lt;/strong&gt;&lt;/a&gt;: add pagination controls to blog listing pages&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mathjax-support&#34;&gt;&lt;strong&gt;MathJax Support&lt;/strong&gt;&lt;/a&gt;: alternative math rendering engine alongside KaTeX&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Dropdown Menu Support in Navbar&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;dropdown-menu-support-in-navbar&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#dropdown-menu-support-in-navbar&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Create dropdown menus in your navigation bar for better navigation items organization.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;hugo.yaml&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;products&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Products&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Product A&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;parent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;products&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/product-a&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Product B&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;parent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;products&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/product-b&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/1816f9b9-7fe3-46e8-9546-f15e43e9914a&#34; alt=&#34;Dropdown menu navigation&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;Enhanced Search Experience&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;enhanced-search-experience&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#enhanced-search-experience&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Search in all headings&lt;/strong&gt;: find content across all heading levels, not just page titles&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improved result accuracy&lt;/strong&gt;: better title handling and linking precision&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fixed result navigation&lt;/strong&gt;: search results now link to the correct page sections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Huge thanks to &lt;a href=&#34;https://github.com/ldez&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@ldez&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; for pushing the search capabilities forward!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/f819652a-95d4-4843-b7e2-c7953a8cabe8&#34; alt=&#34;Enhanced search results&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;llms.txt Support&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;llmstxt-support&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#llmstxt-support&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Hextra now supports &lt;a href=&#34;https://llmstxt.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;llms.txt&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; output format for your site, making your site more accessible to AI tools and language models for context and reference.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;hugo.yaml&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;outputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;home&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;html, llms]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This will generate an &lt;code&gt;llms.txt&lt;/code&gt; file at your site&amp;rsquo;s root.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/c6e929bb-0fce-4ab2-af15-a71c5a38b22c&#34; alt=&#34;Example llms txt&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;Table of Contents Scroll Highlighting&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;table-of-contents-scroll-highlighting&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#table-of-contents-scroll-highlighting&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The table of contents now automatically highlights the current section as you scroll through the page, making navigation more intuitive.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/d623fb99-7000-428b-af95-384eb722f0eb&#34; alt=&#34;ToC scroll highlighting&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;Synchronized Tab Switching&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;synchronized-tab-switching&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#synchronized-tab-switching&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Tabs with the same items now synchronize across the page. When sync is enabled, selecting a tab updates all tab groups that share the same items list (and your selection is remembered).&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;hugo.yaml&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;page&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tabs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;sync&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Blog List Pagination&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;blog-list-pagination&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#blog-list-pagination&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Basic pagination controls have been added to blog listing pages.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;hugo.yaml&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;blog&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;pagerSize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Posts per page&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/60405fb4-ec36-4733-ba13-b4066396b5c5&#34; alt=&#34;Blog pagination&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;MathJax Support&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;mathjax-support&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#mathjax-support&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Render mathematical expressions with &lt;a href=&#34;https://www.mathjax.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MathJax&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; alongside the default KaTeX support. Choose the engine that best fits your needs.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;hugo.yaml&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;engine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;mathjax&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# default is &amp;#34;katex&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Technical Improvements&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;technical-improvements&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#technical-improvements&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Framework and Build System&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;framework-and-build-system&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#framework-and-build-system&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tailwind CSS v4 Migration&lt;/strong&gt;: complete migration to &lt;a href=&#34;https://tailwindcss.com/blog/tailwindcss-v4&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tailwind CSS v4&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; with improved customization support.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hugo Template System&lt;/strong&gt;: adapted to Hugo&amp;rsquo;s &lt;a href=&#34;https://gohugo.io/templates/new-templatesystem-overview/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;new template system&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; (v0.146.0+) for future compatibility.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Math Server-Side Rendering&lt;/strong&gt;: better handling of math equation rendering using Hugo native rendering by default.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FlexSearch 0.8 Upgrade&lt;/strong&gt;: upgraded search engine &lt;a href=&#34;https://github.com/nextapps-de/flexsearch&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FlexSearch&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; for faster, more accurate results with improved CJK (Chinese, Japanese, Korean) content encoding.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enhanced Asset Management&lt;/strong&gt;: KaTeX and Mermaid assets support loading from CDN or local&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Quality of Life Improvements&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;quality-of-life-improvements&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#quality-of-life-improvements&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic favicon switching&lt;/strong&gt;: automatic favicon updates based on color scheme preferences&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reverse pagination&lt;/strong&gt;: authors can now set &lt;code&gt;reversePagination&lt;/code&gt; in page front matter&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google indexing control&lt;/strong&gt;: new page parameter to block Google indexing when needed&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Width handling improvements&lt;/strong&gt;: better responsive design controls via CSS variables&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Styling improvements&lt;/strong&gt;: modern styles for Markdown table and horizontal line&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Bug Fixes and Stability&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;bug-fixes-and-stability&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#bug-fixes-and-stability&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Giscus theme synchronization&lt;/strong&gt;: comments now properly follow dark/light mode switches&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Search result accuracy&lt;/strong&gt;: fixed linking issues and title escaping in search results&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tab switching&lt;/strong&gt;: resolved navigation issues in non-synced tab mode&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Phantom scrolling&lt;/strong&gt;: fixed unwanted scroll behavior when footer is disabled&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Image accessibility&lt;/strong&gt;: prevented duplicate alt text rendering&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Link rendering&lt;/strong&gt;: improved base URL handling for complex site structures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Migration Guide&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;migration-guide&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#migration-guide&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#hugo-version-requirements&#34;&gt;&lt;strong&gt;Hugo Version Requirements&lt;/strong&gt;&lt;/a&gt;: Requires Hugo v0.146.0+ (extended version)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#css-class-prefix-changes&#34;&gt;&lt;strong&gt;CSS Class Prefix Changes&lt;/strong&gt;&lt;/a&gt;: Component CSS classes now use consistent &lt;code&gt;hextra-&lt;/code&gt; prefixing&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#asset-management-for-katex-and-mermaid&#34;&gt;&lt;strong&gt;Asset Management&lt;/strong&gt;&lt;/a&gt;: KaTeX and Mermaid assets now download during build time&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tailwind-css-v4&#34;&gt;&lt;strong&gt;Tailwind CSS v4&lt;/strong&gt;&lt;/a&gt;: Internal CSS compilation now uses Tailwind CSS v4.x with &lt;code&gt;hx:&lt;/code&gt; prefix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Hugo Version Requirements&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;hugo-version-requirements&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#hugo-version-requirements&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Impact&lt;/strong&gt;: Sites running older Hugo versions&lt;/p&gt;
+&lt;p&gt;Hextra v0.10.0 requires Hugo v0.146.0 or later (extended version) due to the new template system adoption.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Action required&lt;/strong&gt;: Update Hugo to v0.146.0+ before upgrading Hextra&lt;/p&gt;
+&lt;h4&gt;CSS Class Prefix Changes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;css-class-prefix-changes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#css-class-prefix-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Impact&lt;/strong&gt;: Sites with custom CSS targeting Hextra component classes&lt;/p&gt;
+&lt;p&gt;Hextra v0.10.0 introduces consistent &lt;code&gt;hextra-&lt;/code&gt; prefixing for majority of component CSS classes to improve maintainability and prevent conflicts with user styles.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Action required&lt;/strong&gt;: If you have custom CSS targeting Hextra components, update the following class names:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Area&lt;/th&gt;
+          &lt;th&gt;Before&lt;/th&gt;
+          &lt;th&gt;After&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Search (container)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.search-wrapper&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-search-wrapper&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Search (input)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.search-input&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-search-input&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Search (results)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.search-results&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-search-results&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Search (title)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.search-wrapper .title&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-search-wrapper .hextra-search-title&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Search (active item)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.search-wrapper .active&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-search-wrapper .hextra-search-active&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Search (no result)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.search-wrapper .no-result&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-search-wrapper .hextra-search-no-result&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Search (prefix)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.search-wrapper .prefix&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-search-wrapper .hextra-search-prefix&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Search (excerpt)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.search-wrapper .excerpt&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-search-wrapper .hextra-search-excerpt&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Search (match)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.search-wrapper .match&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-search-wrapper .hextra-search-match&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Navbar blur&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.nav-container-blur&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-nav-container-blur&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hamburger menu&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hamburger-menu&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-hamburger-menu&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Theme toggle&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.theme-toggle&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-theme-toggle&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Language switcher&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.language-switcher&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-language-switcher&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Sidebar container&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.sidebar-container&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-sidebar-container&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Sidebar active item&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.sidebar-active-item&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-sidebar-active-item&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Code filename&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.filename&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-code-filename&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Copy icon&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.copy-icon&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-copy-icon&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Success icon&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.success-icon&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-success-icon&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Steps&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.steps&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.hextra-steps&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;Asset Management for KaTeX and Mermaid&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;asset-management-for-katex-and-mermaid&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#asset-management-for-katex-and-mermaid&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Impact&lt;/strong&gt;: Sites using KaTeX or Mermaid&lt;/p&gt;
+&lt;p&gt;Hextra v0.10.0 now downloads KaTeX and Mermaid assets from CDN during build time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What&amp;rsquo;s changed:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Build process now requires internet access to download these assets&lt;/li&gt;
+&lt;li&gt;No more external CDN calls for these assets after build&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Action required&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure your build environment has internet access to download assets&lt;/li&gt;
+&lt;li&gt;Sites in air-gapped environments may need to pre-download these assets and configure Hextra to load them&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Tailwind CSS v4&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;tailwind-css-v4&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#tailwind-css-v4&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Impact&lt;/strong&gt;: Sites with extensive custom CSS targeting Hextra Tailwind classes &lt;code&gt;hx-*&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;While Hextra handles the Tailwind CSS v4 migration internally, sites with heavy customizations may need further adjustments.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What&amp;rsquo;s changed:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Internal CSS compilation now uses Tailwind CSS v4.x&lt;/li&gt;
+&lt;li&gt;Utility classes now prefix with &lt;code&gt;hx:&lt;/code&gt; rather than &lt;code&gt;hx-&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Contributors&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;contributors&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#contributors&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This release was made possible by contributions from 10 new contributors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/oosquare&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@oosquare&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - KaTeX fonts, image render hooks, link handling improvements&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Zabriskije&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@Zabriskije&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - Phantom scroll fix&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/miniwater&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@miniwater&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - Custom footer centering, image alt text improvements&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/MattDodsonEnglish&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@MattDodsonEnglish&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - Google indexing controls, OpenGraph documentation&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/KStocky&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@KStocky&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - Reverse pagination feature&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/PrintN&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@PrintN&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - Documentation showcase additions&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hobobandy&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@hobobandy&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - Title spacing improvements&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dlwocks31&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@dlwocks31&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - Korean translation updates&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/TwoAnts&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@TwoAnts&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - Giscus theme switching fix&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ldez&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@ldez&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - Search improvements and bug fixes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Additional thanks to returning contributors &lt;a href=&#34;https://github.com/deining&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@deining&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; and &lt;a href=&#34;https://github.com/yuri1969&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@yuri1969&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; for their continued support with documentation, translations, and technical improvements.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a href=&#34;https://github.com/imfing/hextra/compare/v0.9.7...v0.10.0&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/imfing/hextra/compare/v0.9.7...v0.10.0&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>
