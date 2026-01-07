@@ -85,7 +85,7 @@ menu:
 #      weight: 3
 
 params:
-  description: Modern, responsive, batteries-included Hugo theme for creating beautiful static websites.
+  description: Agent-Sandbox is an enterprise-grade ai-first, cloud-native, high-performance sandbox runtime environment designed for AI Agents.
 
   externalLinkDecoration: true
 
